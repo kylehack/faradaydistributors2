@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>Form</title>
+    <script type="text/javascript" src="calcform.js"></script>
+    <link href="calcform.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+ <!-- <link rel="stylesheet" type="text/css" href="stle.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster|Princess+Sofia" rel="stylesheet">
+<meta charset="UTF-8">
+
+  <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+</head>
+<body onload='hideTotal()'>
+
+
+  <div class="navbar">
+          <div class="navbar">
+          <nav>
+          <div class="container">
+          <!--<img src="#" class="logo" width="100px" height="100px">-->
+          </div>
+                <a href="Home.html">Home</a>
+                <a href="aboutus.html" >About Us</a>
+                <a href="Signup.html">Sign Up</a>
+                <a href="login form.html" >Login</a>
+                <a href="form3.html" >Customer Request Form</a>
+                
+                <!--<a href="Showroom.html" >Showroom</a></label>-->
+                
+            </nav>
+      </div>
+    </div>
+<br>
+
+<style type="text/css">
+  
+  #wrap{
+  width:400px;
+  margin:0 auto;
+  text-align:left;
+  margin-top:8px;
+  padding:5px;
+  background:#fff;
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+  font-size:13px;    
+    line-height:16px;
+    margin-left: 100px;
+}
+#wrap .cont_details fieldset,.cont_order fieldset{
+  margin:10px;
+  padding:20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+#wrap legend{
+  font-size:16px;
+  font-family:Georgia, "Times New Roman", Times, serif;
+  color:#000;
+  font-weight:bold;
+  font-style:italic;
+    padding-bottom:10px;
+}
+#wrap .cont_details input{
+  margin-bottom:10px;
+  color:#000;
+}
+#wrap .input1:hover,.input1:active{
+  
+}
+#wrap label{
+  display:block;
+  font-size:12px;
+  color:#000;
+    font-weight:bold;
+}
+#wrap label.inlinelabel
+{
+    display:inline;
+}
+#wrap .cont_order input{
+  margin-bottom:5px;
+}
+#wrap .cont_order p{
+  padding-top:5px;
+}
+
+#wrap input[type="radio"]
+{
+margin-top:8px;
+margin-bottom:8px;
+}
+
+#wrap input[type="text"]:hover,
+#wrap input[type="text"]:active {
+background-color: #FAF398;
+}
+
+#wrap input#submit
+{
+margin:10px;
+padding-left:20px;
+padding-right:20px;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+#wrap div#totalPrice
+{
+    padding:10px;
+    font-weight:bold;
+    background-color:#ff0;
+}
+
+#wrap label.radiolabel
+{
+font-weight:normal;
+ display:inline;
+}
+.container{overflow: hidden}
+            .tab{float: left;}
+            .tab-2{margin-left: 80px}
+            .tab-2 input{display: block;margin-bottom: 10px}
+            tr{transition:all .25s ease-in-out}
+            tr:hover{background-color:#EEE;cursor: pointer}
+           
+  
+  table, td {
+    border: 1px solid black;
+
+margin-left: 100px;
+}
+
+
+
+.navbar {
+          background-color: burlywood;
+          overflow: hidden;
+           border: none;
+      }
+
+
+      /* Style the links inside the navigation bar */
+      .navbar a {
+          float: left;
+          display: block;
+          color: green;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+      }
+
+      /* Change the color of links on hover */
+      .navbar a:hover {
+          background-color: #ddd;
+          color: black;
+      }
+
+      /* Add a color to the active/current link */
+      .navbar a.active {
+          background-color: #4CAF50;
+          color: white;
+      }
+     
+form {
+background-color: #4CAF50;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.shell{
+  margin-left: 100px;
+  margin-bottom: 100px;
+
+}
+</style>
+<center><h1>Faraday Distributors</h1></center>
+<center><h2>Customer Request Form</h2></center>
+    <div id="wrap">
+        <form action="" id="pipeform" onsubmit="return false;">
+        <div>
+            <div class="cont_order">
+               <fieldset>
+                <legend>Make your order</legend>
+                <label >Size Of Pipe</label>
+                <label class='radiolabel'><input type="radio"  name="selectedpipe" value="Round6" onclick="calculateTotal()" />Round 6" - ($20)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedpipe" value="Round8" onclick="calculateTotal()" />Round  8" -  ($25)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedpipe" value="Round10" onclick="calculateTotal()" />Round  10" - ($35)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedpipe" value="Round12" onclick="calculateTotal()" />Round  12" - ($75)</label><br/>
+                <br/>
+                <label >Fittings</label>
+         
+                <select id="fitting" name='fitting' onchange="calculateTotal()">
+                <option value="None">Select Fitting</option>
+                <option value="elbow">elbow($5)</option>
+                <option value="coupling">Coupling($5)</option>
+                <option value="union">Union($7)</option>
+                <option value="nipple">Nipple($8)</option>
+                <option value="reducer">Reducer($10)</option>
+                <option value="brushing">Double-tapped brushing($5)</option>
+                <option value="tee">Tee($9)</option>
+                <option value="tee2">Diverter Tee($5)</option>
+                <option value="cap">Cap($5)</option>
+                <option value="plug">Plug($8)</option>
+                <option value="valve">Valve($7)</option>
+                <option value="wye">Wye (Y)($12)</option>
+               </select>
+                <br/>
+                <p>
+                <label for='includecandles' class="inlinelabel">Include Gaskets($5)</label>
+               <input type="checkbox" id="includecandles" name='includecandles' onclick="calculateTotal()" />
+               </p>
+               
+                <p>
+                <label class="inlinelabel" for='includeinscription'>Include Inscription($20)</label>
+                <input type="checkbox" id="includeinscription" name="includeinscription" onclick="calculateTotal()" />
+                <input type="text"  id="theinscription" name="theinscription" value="Enter Inscription"  />
+                </p>
+                <div id="totalPrice"></div>
+                
+                </fieldset>
+            </div>
+            
+          <div class="cont_details">
+              <!--<fieldset>-->
+                 
+           <p>Comapany Name:</p>
+         <input name="fname" placeholder="Your name.." id = "company name"required>
+
+          <p>Contact Number:</p>
+          <input  name="lname" placeholder="Telephone number.." type="tel" id="tel" required>
+
+          <p>Company address:</p>
+          <input  name="age" placeholder="Your last name.." id="company address" required>
+
+          <p>Email Address:</p>
+         <input name="ename"  placeholder="example@myemail.com" id="email" required>
+                <p>Item(s):</p>
+          <textarea name="iname" placeholder="Request items" id="items" required></textarea> 
+           <p>Amount due:</p>
+         <input  name="aname" type="number" placeholder="amount $" id="amount" required>
+           <p>Date of Payment:</p>
+         <input name="dname"  type="date" id="date" required><br/>
+               <!-- </fieldset>-->
+            </div>
+             <button onclick="addHtmlTableRow();">Submit</button>
+                <!--<button onclick="editHtmlTbleSelectedRow();">Edit</button>-->
+                <button onclick="removeSelectedRow();">Remove</button>
+        </div>  
+       </form>
+  </div><!--End of wrap-->
+
+<div class="shell">
+  <div class="container-fluid">
+  <center>
+                
+            <div class="tab tab-1">
+
+              <!---filter---> 
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+              <!--filtre-->
+
+                <table id="table" border="1">
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Company Number</th>
+                        <th>Company Address</th>
+                        <th>Email Adress</th>
+                        <th>Items</th>
+                        <th>Amount Due ($)</th>
+                        <th>Date of Payment</th>
+                       
+                    </tr>
+                   
+                </table>
+
+            </div>
+        </center>
+      </div>
+
+
+
+
+<!--<script>
+
+  let rIndex,
+                table = document.getElementById("table");
+            
+            // check the empty input
+            function checkEmptyInput()
+            {
+                var isEmpty = false,
+                    fname = document.getElementById("company name").value,
+                    lname = document.getElementById("tel").value,
+                    age = document.getElementById("company address").value,
+                    ename = document.getElementById("email").value,
+                    iname = document.getElementById("items").value,
+                    aname = document.getElementById("amount").value,
+                    dname = document.getElementById("date").value;
+            
+                if(fname === ""){
+                    alert("Company Name Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(lname === ""){
+                    alert("Company Number Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(age === ""){
+                    alert("Address Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(ename === ""){
+                    alert("Email Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(iname === ""){
+                    alert("items Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(aname === ""){
+                    alert("Amount Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(dname === ""){
+                    alert("Date Connot Be Empty");
+                    isEmpty = true;
+                }
+
+                return isEmpty;
+            }
+            // add Row
+            function addHtmlTableRow() 
+            {
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
+                // set the values into row cell's
+                if(!checkEmptyInput()){
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    cell4 = newRow.insertCell(3),
+                    cell5 = newRow.insertCell(4),
+                    cell6 = newRow.insertCell(5),
+                    cell7 = newRow.insertCell(6),
+                    fname = document.getElementById("company name").value,
+                    lname = document.getElementById("tel").value,
+                    address = document.getElementById("company address").value
+                    ename = document.getElementById("email").value,
+                    iname = document.getElementById("items").value,
+                    aname = document.getElementById("amount").value,
+                    dname = document.getElementById("date").value;            
+                cell1.innerHTML = fname;
+                cell2.innerHTML = lname;
+                cell3.innerHTML = address;
+                cell4.innerHTML = ename;
+                cell5.innerHTML = iname;
+                cell6.innerHTML = aname;
+                cell7.innerHTML = dname;
+                // call the function to set the event to the new row
+                selectedRowToInput();
+            }
+            }
+            
+            // display selected row data into input text
+            function selectedRowToInput()
+            {
+                
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                      // get the seected row index
+                      rIndex = this.rowIndex;
+                      document.getElementById("company name").value = this.cells[0].innerHTML;
+                      document.getElementById("tel").value = this.cells[1].innerHTML;
+                      document.getElementById("company address").value = this.cells[2].innerHTML;
+                      document.getElementById("email").value = this.cells[3].innerHTML;
+                      document.getElementById("items").value = this.cells[4].innerHTML;
+                      document.getElementById("amount").value = this.cells[5].innerHTML;
+                      document.getElementById("date").value = this.cells[6].innerHTML;
+                    };
+                }
+            }
+            selectedRowToInput();
+           
+            function removeSelectedRow()
+            {
+                table.deleteRow(rIndex);
+                // clear input text
+                document.getElementById("comapny name").value = "";
+                document.getElementById("tel").value = "";
+                document.getElementById("company addres").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("items").value = "";
+                document.getElementById("amount").value = "";
+                document.getElementById("date").value = "";
+            }
+/*Filter*/
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+//filter
+
+
+  //Set up an associative array
+ 
+ //The values represent the cost of the various inch of pipes i.e A 10" pipe cost's $35
+ var pipe_prices = new Array();
+ pipe_prices["Round6"]=20;
+ pipe_prices["Round8"]=25;
+ pipe_prices["Round10"]=35;
+ pipe_prices["Round12"]=75;
+ 
+ //Set up an associative array 
+ //The keys represent the fitting type
+ //The value represents the cost of the fitting i.e. elbow filling is $5,Tee filling is $9
+ //We use this this array when the user selects a filling from the form
+ var fitting_prices= new Array();
+ fitting_prices["None"]=0;
+ fitting_prices["elbow"]=5;
+ fitting_prices["coupling"]=5;
+ fitting_prices["union"]=7;
+ fitting_prices["nipple"]=8;
+ fitting_prices["reducer"]=10;
+ fitting_prices["brushing"]=5;
+ fitting_prices["tee"]=9;
+ fitting_prices["tee2"]=5;
+ fitting_prices["cap"]=5;
+ fitting_prices["plug"]=8;
+ fitting_prices["valve"]=7;
+ fitting_prices["wye"]=12;
+ 
+   
+   
+// getCakeSizePrice() finds the price based on the size of the pipe.
+// Here, we need to take user's the selection from radio button selection
+function getPipeSizePrice()
+{  
+    var pipeSizePrice=0;
+    //Get a reference to the form id="pipeform"
+    var theForm = document.forms["pipeform"];
+    //Get a reference to the cake the user Chooses name=selectedpipe":
+    var selectedPipe = theForm.elements["selectedpipe"];
+    //Here since there are 4 radio buttons selectedpipe.length = 4
+    //We loop through each radio buttons
+    for(var i = 0; i < selectedPipe.length; i++)
+    {
+        //if the radio button is checked
+        if(selectedPipe[i].checked)
+        {
+            //we set cakeSizePrice to the value of the selected radio button
+            //i.e. if the user choose the 8" pipe we set it to 25
+            //by using the pipe_prices array
+            //We get the selected Items value
+            //For example pipe_prices["Round8".value]"
+            pipeSizePrice = pipe_prices[selectedPipe[i].value];
+            //If we get a match then we break out of this loop
+            //No reason to continue if we get a match
+            break;
+        }
+    }
+    //We return the cakeSizePrice
+    return pipeSizePrice;
+}
+
+//This function finds the fitting price based on the 
+//drop down selection
+function getFittingPrice()
+{
+    var pipeFittingPrice=0;
+    //Get a reference to the form id="cakeform"
+    var theForm = document.forms["pipeform"];
+    //Get a reference to the select id="filling"
+     var selectedFitting = theForm.elements["fitting"];
+     
+    //set cakeFilling Price equal to value user chose
+    //For example filling_prices["Lemon".value] would be equal to 5
+    pipeFittingPrice = fitting_prices[selectedFitting.value];
+
+    //finally we return cakeFillingPrice
+    return pipeFittingPrice;
+}
+
+//candlesPrice() finds the candles price based on a check box selection
+function candlesPrice()
+{
+    var candlePrice=0;
+    //Get a reference to the form id="cakeform"
+    var theForm = document.forms["pipeform"];
+    //Get a reference to the checkbox id="includecandles"
+    var includeCandles = theForm.elements["includecandles"];
+
+    //If they checked the box set candlePrice to 5
+    if(includeCandles.checked==true)
+    {
+        candlePrice=5;
+    }
+    //finally we return the candlePrice
+    return candlePrice;
+}
+
+function insciptionPrice()
+{
+    //This local variable will be used to decide whether or not to charge for the inscription
+    //If the user checked the box this value will be 20
+    //otherwise it will remain at 0
+    var inscriptionPrice=0;
+    //Get a refernce to the form id="cakeform"
+    var theForm = document.forms["pipeform"];
+    //Get a reference to the checkbox id="includeinscription"
+    var includeInscription = theForm.elements["includeinscription"];
+    //If they checked the box set inscriptionPrice to 20
+    if(includeInscription.checked==true){
+        inscriptionPrice=20;
+    }
+    //finally we return the inscriptionPrice
+    return inscriptionPrice;
+}
+        
+function calculateTotal()
+{
+    //Here we get the total price by calling our function
+    //Each function returns a number so by calling them we add the values they return together
+    var pipePrice = getPipeSizePrice() + getFittingPrice() + candlesPrice() + insciptionPrice();
+    
+    //display the result
+    var divobj = document.getElementById('totalPrice');
+    divobj.style.display='block';
+    divobj.innerHTML = "Total Price For the Pipe $"+pipePrice;
+
+}
+
+function hideTotal()
+{
+    var divobj = document.getElementById('totalPrice');
+    divobj.style.display='none';
+}
+
+
+
+
+
+
+</script>-->
+
+
+<script type="text/javascript" src="pipeform3.js"></script>
+
+</body>
+</html>
+
